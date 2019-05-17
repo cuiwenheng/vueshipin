@@ -193,7 +193,7 @@
     width: auto;
     /*text-overflow: ellipsis;*/
     text-align: left;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 400;
     color: #fff;
     display:inline-block;
@@ -213,7 +213,7 @@
     align-items: center;
     padding-bottom: 0.3rem;*/
   }
-  .dudao .fontbt{
+  .dudao .fontbt33{
     background-color: #56ada1;
     border: 1 solid blue;
     border-radius: 0.5rem;
@@ -223,6 +223,34 @@
     width: 3rem;
     height: 1.4rem;
   }
+  .dudao .fontbt{
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.02;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 5px 8px;
+    cursor: pointer;
+    -webkit-transition: all;
+            transition: all;
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    -webkit-transition-duration: .2s;
+            transition-duration: .2s;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-clip: padding-box;
+    color: #fff;
+    border: 1px solid #dd524d;
+    background-color: #dd524d;
+    }
   .loadMoudle{
     display: block;
     font-size: 0.75rem;
