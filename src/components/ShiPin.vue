@@ -1,17 +1,14 @@
 <template lang="html">
-  <div>
+  <div >
     <div class="header">
       <div class="header-title">
         <span>学习列表</span>
       </div>
-    </div>
-    <div class="dudao">
-      <div class="fontbt">督导</div>
+      <div class="dudao"><div class="fontbt">督导</div> </div>
     </div>
     <div class="loadMoudle" @touchstart="touchStart($event)" @touchmove="touchMove($event)" :style="{transform: 'translate3d(0,' + top + 'px, 0)'}">
       <!-- <slot></slot> -->
-      <div class="load-list" v-for="(video, index) in $store.state.vedios.videoarr">
-        <div style="margin-bottom: 0.1rem;"></div>
+      <div class="load-list"  v-for="(video, index) in $store.state.vedios.videoarr">
         <div class="load-list-cell" v-on:click="playVideo($event,video)">
           <div class="load-media-list">
             <div class="load-media-list-img">
@@ -20,10 +17,11 @@
             </div>
             <div class="load-media-body">
               <div class="load-media-body-text-top">{{video.title}}</div>
-              <div class="load-media-body-text-bottom">MTM平台</div>
+              <div class="load-media-body-text-bottom"><!--MTM平台--></div>
             </div>
           </div>
         </div>
+        <div style="border-bottom:1px solid #C0C0C0"> </div>
         <!-- <div class="load-list-cell">
           <div class="load-media-list">
             <div class="load-media-list-img">
@@ -191,48 +189,49 @@
     background-color: #7dab8d;
   }
   .header-title{
-    margin: 0 3rem;
-    height: 2rem;
+    margin: 0.3rem .6rem;
     width: auto;
-    overflow: hidden;
     /*text-overflow: ellipsis;*/
-    white-space: nowrap;
-    line-height: 2rem;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
+    display:inline-block;
   }
   .dudao{
-    width: 100%;
-    margin-top: 2.5rem;
+    display:inline-block;
+    float: right;
+    top: 0.4rem;
+    position: relative;
+    right: 0.9rem;
+    /*width: 100%;
+    margin-top: 2.3rem;
     background-color: #FFFFFF;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;*/
   }
   .dudao .fontbt{
     background-color: #56ada1;
     border: 1 solid blue;
     border-radius: 0.5rem;
     color:#FFFFFF;
-    box-shadow: 0.1rem 0.2rem 0.2rem 0.2rem;
-    font-size: 1rem;
+    /*box-shadow: 0.1rem 0.2rem 0.2rem 0.2rem;*/
+    font-size: .8rem;
     width: 3rem;
-    height: 2rem;
-    line-height: 2rem;
-    margin-right: 1.5rem;
+    height: 1.4rem;
   }
   .loadMoudle{
     display: block;
     font-size: 0.75rem;
     line-height: 1.8;
     background-color: #FFFFFF;
+    margin-top: 2.3rem;
   }
   .load-list{
-    background-color: #C0C0C0;
+    background-color: #fff;
     position: relative;
     width: 100%;
     display: flex;
@@ -293,11 +292,13 @@
   }
   .load-media-body-text-top{
       height: 2rem;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       overflow: hidden;
       width: 100%;
       line-height: 1rem;
       text-align: left;
+      color:#888;
+      margin-top:.4rem;
   }
   .load-media-body-text-bottom{
     margin-left: 1rem;
